@@ -12,6 +12,24 @@
 
     console.log("FAB 전체 상품 수집 시작");
 
+    // // 사전 스크롤: 맨 아래까지 끝까지 내려서 전체 목록을 로드
+    // {
+    //     let lastHeight = 0;
+    //     let same = 0;
+    //     while (same < 50) {
+    //         window.scrollTo({ top: document.body.scrollHeight, behavior: "instant" });
+    //         await sleep(100);
+    //         const h = document.body.scrollHeight;
+    //         same = (h === lastHeight) ? same + 1 : 0;
+    //         lastHeight = h;
+    //     }
+    //     console.log("사전 스크롤 완료. 높이:", lastHeight);
+
+    //     // 맨 위로 복귀 후 수집 시작
+    //     window.scrollTo({ top: 0, behavior: "instant" });
+    //     await sleep(500);
+    // }
+
     while (stableCount < 50) {
 
         iteration++;
@@ -39,10 +57,10 @@
             if (prev && prev.title && !title) return;
 
             collected.set(uuid, {
-                title: title,
-                href: href,
+                //title: title,
+                //href: href,
                 uuid: uuid,
-                product_url: `https://www.fab.com/listings/${uuid}`
+                //product_url: `https://www.fab.com/listings/${uuid}`
             });
 
         });

@@ -2,7 +2,7 @@
 // 사용법: fab.com 에 로그인한 상태에서 F12 콘솔에 붙여넣기 → 파일 선택창에서 fab_all_assets.json 선택
 // 중지: window.__fabStop = true
 (async () => {
-  const CONCURRENCY = 16;   // 동시 요청 수 (429/403 나오면 줄이기)
+  const CONCURRENCY = 64;   // 동시 요청 수 (429/403 나오면 줄이기)
   const DELAY_MS = 10;     // 워커별 요청 사이 대기(ms)
   const START = 0;         // 재개용 시작 인덱스
 
